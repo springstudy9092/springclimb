@@ -1,13 +1,13 @@
-package esa.study.esastudy;
+package spring.study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EsaStudyApplication {
+public class SpringStudyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EsaStudyApplication.class, args);
+        SpringApplication.run(SpringStudyApplication.class, args);
     }
 
 }
