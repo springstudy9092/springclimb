@@ -22,10 +22,12 @@ public class UserController {
         return "user test.";
     }
 
-    @PostMapping({"/signUp"})
-    public String signUp(@RequestBody UserRequest reqBody) {
-        System.out.println("reqbody" + reqBody);
-        return userService.signUp(reqBody);
+    @PostMapping({"/join"})
+    public ResponseEntity<UserRequest> signUp(@RequestBody UserRequest reqBody) {
+        // 일단 받은 내용 다시 반환까지 확인
+        System.out.println("reqbody" + reqBody.getEmail());
+        //  return userService.signUp(reqBody);
+        return ResponseEntity.ok().body(reqBody);
     }
 
     @GetMapping("/findId")

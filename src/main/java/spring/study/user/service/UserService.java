@@ -18,7 +18,9 @@ public class UserService {
         this.userrepository = userrepository;
     }
 
-    public String signUp(UserRequest userRequest) {
+    public String join(UserRequest userRequest) {
+        // 임시 처리
+        // 저장 구현 예정
         return "test";
     }
 
