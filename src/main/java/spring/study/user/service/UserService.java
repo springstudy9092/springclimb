@@ -8,6 +8,8 @@ import spring.study.user.domain.repository.UserRepository;
 import spring.study.user.service.UserRequest.UserRequest;
 import spring.study.user.service.UserResponse.UserResponse;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -22,6 +24,26 @@ public class UserService {
         // 임시 처리
         // 저장 구현 예정
         return "test";
+    }
+
+    public String login(UserRequest userRequest){
+        try{
+            Optional<User> user = userrepository.findById(userRequest.getEmail());
+
+            if(user.isPresent()){
+                return "true";
+            }
+        }
+        catch (Exception ex){
+            return "false";
+        }
+//        Optional<User> user = userrepository.findById(userRequest.getEmail());
+//
+//        if(user.isPresent()){
+//            return "true";
+//        }
+
+        return "false";
     }
 
     // 사용자 이메일 정보 기준으로 사용자 객체 반환

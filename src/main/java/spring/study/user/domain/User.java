@@ -11,12 +11,12 @@ public class User {
     private String email;
     private String password;
     private String name;
-    private float height;
-    private float weight;
-    private String experience;
-    private String area;
-    private String idPhoto;
-    private Date birthDt;
-    private Date modrDt;
+//    private float height;
+//    private float weight;
+//    private String experience;
+//    private String area;
+//    private String idPhoto;
+//    private Date birthDt;
+//    private Date modrDt;
 
 }

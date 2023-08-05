@@ -22,6 +22,12 @@ public class UserController {
         return "user test.";
     }
 
+    @PostMapping({"/login"})
+    public ResponseEntity<String> login(@RequestBody UserRequest reqBody) {
+        String result = userService.login(reqBody);
+        return ResponseEntity.ok().body(result);
+    }
+
     @PostMapping({"/join"})
     public ResponseEntity<UserRequest> signUp(@RequestBody UserRequest reqBody) {
         // 일단 받은 내용 다시 반환까지 확인
