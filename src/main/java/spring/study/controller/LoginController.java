@@ -1,10 +1,9 @@
-package spring.study.login.controller;
+package spring.study.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import spring.study.login.service.LoginService;
-import spring.study.user.service.UserService;
+import spring.study.service.LoginService;
 
 @RestController
 @RequiredArgsConstructor
